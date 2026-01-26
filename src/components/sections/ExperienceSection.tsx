@@ -5,24 +5,28 @@ import { Calendar } from 'lucide-react';
 
 const experiences = [
   {
-    company: 'TechCorp Solutions',
-    role: 'Senior Frontend Developer',
-    duration: '2022 - Present',
+    company: 'Google (Virtual Internship)',
+    role: 'AI/ML Virtual Intern',
+    duration: 'Apr 2025 – Jun 2025',
+    description: 'Completed a structured virtual internship focused on Artificial Intelligence and Machine Learning concepts, gaining practical exposure to real-world AI workflows and tools.',
   },
   {
-    company: 'StartupHub Inc.',
-    role: 'Full Stack Developer',
-    duration: '2020 - 2022',
+    company: 'Google (Virtual Internship)',
+    role: 'Generative AI Virtual Intern',
+    duration: 'Oct 2024 – Dec 2024',
+    description: 'Worked on Generative AI fundamentals including large language models, prompt design, and AI-driven application development through guided learning modules.',
   },
   {
-    company: 'Digital Agency Co.',
-    role: 'Web Developer',
-    duration: '2018 - 2020',
+    company: 'SRM University',
+    role: 'Student Web & AI Developer (Projects)',
+    duration: '2026 – Present',
+    description: 'Developed academic and personal projects including an inventory management system and an AI-based chatbot using HTML, CSS, Python, MySQL, and GitHub.',
   },
   {
-    company: 'Freelance',
-    role: 'Independent Consultant',
-    duration: '2016 - 2018',
+    company: 'Academic Conferences',
+    role: 'Student Researcher (AI Applications)',
+    duration: '2024 – 2025',
+    description: 'Authored and presented research papers on Artificial Intelligence applications in education, industry, and social impact at national and international conferences.',
   },
 ];
 
@@ -36,7 +40,7 @@ export const ExperienceSection = () => {
               Experience & Background
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Over 8 years of experience building web applications for startups and enterprises.
+              My journey in web development and AI through internships, projects, and research.
             </p>
           </div>
         </AnimatedSection>
