@@ -24,9 +24,11 @@ export const HeroSection = () => {
             {/* Main Heading */}
             <div className="space-y-4">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-                Hi, I'm a{' '}
-                <span className="text-gradient">Web Developer</span>
+                Hi, I'm <span className="text-foreground">VIDULA P S</span>
               </h1>
+              <p className="text-2xl md:text-3xl lg:text-4xl font-semibold text-gradient animate-fade-in-up" style={{ animationDelay: '0.15s' }}>
+                Web Developer
+              </p>
               <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
                 I build fast, responsive, and scalable web applications with clean code and modern design.
               </p>
