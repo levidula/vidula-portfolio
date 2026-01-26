@@ -13,10 +13,10 @@ export const FooterSection = () => {
                 Let's connect and chat
               </h3>
               <a 
-                href="mailto:hello@developer.com" 
+                href="mailto:byvidula@gmail.com" 
                 className="text-primary hover:text-teal-dark transition-colors text-lg font-medium"
               >
-                hello@developer.com
+                byvidula@gmail.com
               </a>
             </div>
 
