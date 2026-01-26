@@ -5,28 +5,24 @@ import { Calendar } from 'lucide-react';
 
 const experiences = [
   {
-    title: 'AI/ML Virtual Intern',
-    organization: 'Google (Virtual Internship)',
-    duration: 'Apr 2025 – Jun 2025',
-    description: 'Completed a structured virtual internship focused on Artificial Intelligence and Machine Learning concepts, gaining practical exposure to real-world AI workflows and tools.',
+    company: 'TechCorp Solutions',
+    role: 'Senior Frontend Developer',
+    duration: '2022 - Present',
   },
   {
-    title: 'Generative AI Virtual Intern',
-    organization: 'Google (Virtual Internship)',
-    duration: 'Oct 2024 – Dec 2024',
-    description: 'Worked on Generative AI fundamentals including large language models, prompt design, and AI-driven application development through guided learning modules.',
+    company: 'StartupHub Inc.',
+    role: 'Full Stack Developer',
+    duration: '2020 - 2022',
   },
   {
-    title: 'Student Web & AI Developer (Projects)',
-    organization: 'SRM University',
-    duration: '2023 – Present',
-    description: 'Developed academic and personal projects including an inventory management system and an AI-based chatbot using HTML, CSS, Python, MySQL, and GitHub.',
+    company: 'Digital Agency Co.',
+    role: 'Web Developer',
+    duration: '2018 - 2020',
   },
   {
-    title: 'Student Researcher (AI Applications)',
-    organization: 'Academic Conferences',
-    duration: '2023 – 2024',
-    description: 'Authored and presented research papers on Artificial Intelligence applications in education, industry, and social impact at national and international conferences.',
+    company: 'Freelance',
+    role: 'Independent Consultant',
+    duration: '2016 - 2018',
   },
 ];
 
@@ -47,7 +43,7 @@ export const ExperienceSection = () => {
 
         <div className="grid md:grid-cols-2 gap-6 mb-10">
           {experiences.map((exp, index) => (
-            <AnimatedSection key={exp.title} delay={index * 100}>
+            <AnimatedSection key={exp.company} delay={index * 100}>
               <ExperienceCard {...exp} />
             </AnimatedSection>
           ))}
