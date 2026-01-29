@@ -1,10 +1,16 @@
 import { Button } from '@/components/ui/button';
 import { SocialIcons } from '@/components/SocialIcons';
-import { MapPin, Sparkles } from 'lucide-react';
+import { MapPin, Sparkles, Briefcase, FolderOpen, FileText } from 'lucide-react';
 import profileImage from '@/assets/profile-image.jpg';
 
 export const HeroSection = () => {
-  const techStack = ['React', 'JavaScript', 'HTML', 'CSS'];
+  const techStack = ['React', 'JavaScript', 'HTML', 'CSS', 'Python', 'MySQL', 'GitHub'];
+
+  const stats = [
+    { icon: Briefcase, value: '2', label: 'Internships' },
+    { icon: FolderOpen, value: '4', label: 'Projects' },
+    { icon: FileText, value: '3', label: 'Publications' },
+  ];
 
   return (
     <section className="section-padding min-h-screen flex items-center">
@@ -34,13 +40,55 @@ export const HeroSection = () => {
               </p>
             </div>
 
-            {/* CTA Button */}
-            <div className="animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+            {/* About Me Paragraph */}
+            <p className="text-base text-muted-foreground leading-relaxed max-w-xl animate-fade-in-up" style={{ animationDelay: '0.25s' }}>
+              A passionate developer and AI enthusiast currently pursuing my studies at SRM University. 
+              I love turning ideas into real-world applications, exploring the intersection of web development 
+              and artificial intelligence, and contributing to meaningful research.
+            </p>
+
+            {/* Stats */}
+            <div className="flex flex-wrap gap-6 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+              {stats.map((stat) => (
+                <div key={stat.label} className="flex items-center gap-3 bg-card rounded-xl px-4 py-3 shadow-card">
+                  <div className="p-2 rounded-lg bg-teal-light">
+                    <stat.icon className="w-5 h-5 text-primary" />
+                  </div>
+                  <div>
+                    <p className="text-xl font-bold text-foreground">{stat.value}</p>
+                    <p className="text-xs text-muted-foreground">{stat.label}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-wrap gap-4 animate-fade-in-up" style={{ animationDelay: '0.35s' }}>
               <a href="#contact">
                 <Button variant="hero" size="lg">
                   Contact Me
                 </Button>
               </a>
+              <a href="#projects">
+                <Button variant="outline" size="lg" className="px-8">
+                  View Projects
+                </Button>
+              </a>
+            </div>
+
+            {/* Tech Stack */}
+            <div className="animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+              <p className="text-sm text-muted-foreground mb-3">Tech Stack</p>
+              <div className="flex flex-wrap gap-2">
+                {techStack.map((tech) => (
+                  <span 
+                    key={tech} 
+                    className="text-sm px-3 py-1.5 rounded-full bg-muted text-foreground font-medium border border-border hover:border-primary/30 transition-colors"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
 
@@ -63,18 +111,11 @@ export const HeroSection = () => {
                   <span className="text-sm font-medium text-foreground">Based in India</span>
                 </div>
 
-                {/* Tech Stack Card */}
+                {/* Sparkle Badge */}
                 <div className="absolute -top-4 -right-4 md:-right-8 bg-card rounded-2xl px-4 py-3 shadow-card-hover animate-float" style={{ animationDelay: '1s' }}>
-                  <div className="flex items-center gap-2 mb-2">
+                  <div className="flex items-center gap-2">
                     <Sparkles className="w-4 h-4 text-primary" />
-                    <span className="text-xs font-medium text-muted-foreground">Tech Stack</span>
-                  </div>
-                  <div className="flex flex-wrap gap-1.5">
-                    {techStack.map((tech) => (
-                      <span key={tech} className="text-xs px-2 py-1 rounded-md bg-muted text-foreground font-medium">
-                        {tech}
-                      </span>
-                    ))}
+                    <span className="text-sm font-medium text-foreground">Open to Opportunities</span>
                   </div>
                 </div>
               </div>
