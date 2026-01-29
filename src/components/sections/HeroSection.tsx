@@ -1,7 +1,13 @@
 import { Button } from '@/components/ui/button';
 import { SocialIcons } from '@/components/SocialIcons';
-import { MapPin, Sparkles } from 'lucide-react';
+import { MapPin, Sparkles, Briefcase, FolderOpen, BookOpen, ArrowRight } from 'lucide-react';
 import profileImage from '@/assets/profile-image.jpg';
+
+const stats = [
+  { icon: Briefcase, value: '2+', label: 'Internships' },
+  { icon: FolderOpen, value: '6+', label: 'Projects' },
+  { icon: BookOpen, value: '3', label: 'Publications' },
+];
 
 export const HeroSection = () => {
   const techStack = ['React', 'JavaScript', 'HTML', 'CSS'];
@@ -34,13 +40,55 @@ export const HeroSection = () => {
               </p>
             </div>
 
-            {/* CTA Button */}
-            <div className="animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+            {/* About Me Paragraph */}
+            <p className="text-muted-foreground leading-relaxed max-w-xl animate-fade-in-up" style={{ animationDelay: '0.25s' }}>
+              A passionate developer and researcher exploring the intersection of web technologies and AI. 
+              Currently pursuing my studies at SRM University while building real-world projects and contributing to academic research.
+            </p>
+
+            {/* Stats */}
+            <div className="flex flex-wrap gap-6 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+              {stats.map((stat) => (
+                <div key={stat.label} className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-xl bg-teal-light flex items-center justify-center">
+                    <stat.icon className="w-5 h-5 text-primary" />
+                  </div>
+                  <div>
+                    <p className="text-xl font-bold text-foreground">{stat.value}</p>
+                    <p className="text-xs text-muted-foreground">{stat.label}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-wrap gap-4 animate-fade-in-up" style={{ animationDelay: '0.35s' }}>
               <a href="#contact">
                 <Button variant="hero" size="lg">
                   Contact Me
                 </Button>
               </a>
+              <a href="#projects">
+                <Button variant="outline" size="lg" className="gap-2">
+                  View Projects
+                  <ArrowRight className="w-4 h-4" />
+                </Button>
+              </a>
+            </div>
+
+            {/* Tech Stack Section */}
+            <div className="animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+              <p className="text-sm text-muted-foreground mb-3">Technologies I work with</p>
+              <div className="flex flex-wrap gap-2">
+                {['React', 'JavaScript', 'HTML5', 'CSS3', 'Tailwind CSS', 'Python', 'MySQL', 'Git'].map((tech) => (
+                  <span 
+                    key={tech} 
+                    className="px-3 py-1.5 rounded-lg bg-muted text-sm font-medium text-foreground border border-border/50 hover:border-primary/50 transition-colors"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
 
