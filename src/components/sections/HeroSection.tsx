@@ -15,7 +15,7 @@ export const HeroSection = () => {
   return (
     <section className="section-padding min-h-screen flex items-center">
       <div className="max-w-7xl mx-auto w-full">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* Left Content */}
           <div className="space-y-8 order-2 lg:order-1">
             {/* Badge */}
@@ -93,11 +93,11 @@ export const HeroSection = () => {
           </div>
 
           {/* Right Content */}
-          <div className="relative order-1 lg:order-2 flex justify-center lg:justify-center">
+          <div className="relative order-1 lg:order-2 flex justify-center lg:justify-start">
             <div className="relative animate-fade-in" style={{ animationDelay: '0.2s' }}>
               {/* Profile Card */}
               <div className="relative">
-                <div className="w-72 h-80 md:w-96 md:h-[28rem] lg:w-[22rem] lg:h-[26rem] rounded-3xl overflow-hidden shadow-card-lg bg-gradient-hero">
+                <div className="w-80 h-[22rem] md:w-[26rem] md:h-[32rem] lg:w-[24rem] lg:h-[30rem] rounded-3xl overflow-hidden shadow-card-lg bg-gradient-hero">
                   <img
                     src={profileImage}
                     alt="Profile"
