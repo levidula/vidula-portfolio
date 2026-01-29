@@ -4,7 +4,7 @@ import { MapPin, Sparkles } from 'lucide-react';
 import profileImage from '@/assets/profile-image.jpg';
 
 export const HeroSection = () => {
-  const techStack = ['React', 'TypeScript', 'Node.js', 'Tailwind'];
+  const techStack = ['React', 'JavaScript', 'HTML', 'CSS'];
 
   return (
     <section className="section-padding min-h-screen flex items-center">
