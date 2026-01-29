@@ -1,4 +1,4 @@
-import { Github, Linkedin, Instagram, Dribbble } from 'lucide-react';
+import { Github, Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 interface SocialIconsProps {
@@ -7,10 +7,8 @@ interface SocialIconsProps {
 }
 
 const socialLinks = [
-  { icon: Github, href: 'https://github.com', label: 'GitHub' },
-  { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-  { icon: Instagram, href: 'https://instagram.com', label: 'Instagram' },
-  { icon: Dribbble, href: 'https://dribbble.com', label: 'Dribbble' },
+  { icon: Github, href: 'https://github.com/levidula', label: 'GitHub' },
+  { icon: Linkedin, href: 'https://www.linkedin.com/in/vidula-p-s-711893246/', label: 'LinkedIn' },
 ];
 
 export const SocialIcons = ({ variant = 'default', className = '' }: SocialIconsProps) => {
