@@ -93,8 +93,8 @@ export const HeroSection = () => {
           </div>
 
           {/* Right Content */}
-          <div className="relative order-1 lg:order-2 flex justify-center lg:justify-center items-center">
-            <div className="relative animate-fade-in flex items-center" style={{ animationDelay: '0.2s' }}>
+          <div className="relative order-1 lg:order-2 flex justify-center lg:justify-center">
+            <div className="relative animate-fade-in" style={{ animationDelay: '0.2s' }}>
               {/* Profile Card */}
               <div className="relative">
                 <div className="w-72 h-80 md:w-96 md:h-[28rem] lg:w-[22rem] lg:h-[26rem] rounded-3xl overflow-hidden shadow-card-lg bg-gradient-hero">
