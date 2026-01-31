@@ -4,7 +4,7 @@ import { MapPin, Sparkles, Briefcase, FolderOpen, FileText } from 'lucide-react'
 import profileImage from '@/assets/profile-image.jpg';
 
 export const HeroSection = () => {
-  const techStack = ['React', 'JavaScript', 'HTML', 'CSS', 'Python', 'MySQL', 'GitHub'];
+  const techStack = ['React', 'JavaScript', 'HTML', 'CSS', 'Python', 'MySQL', 'GitHub', 'API Integration', 'MS Office', 'Power BI'];
 
   const stats = [
     { icon: Briefcase, value: '2', label: 'Internships' },
@@ -108,7 +108,7 @@ export const HeroSection = () => {
                 {/* Location Badge */}
                 <div className="absolute -bottom-4 -left-4 md:-left-8 bg-card rounded-2xl px-4 py-3 shadow-card-hover flex items-center gap-2 animate-float">
                   <MapPin className="w-4 h-4 text-primary" />
-                  <span className="text-sm font-medium text-foreground">Based in India</span>
+                  <span className="text-sm font-medium text-foreground">Based in Chennai, Tamil Nadu</span>
                 </div>
 
                 {/* Sparkle Badge */}
