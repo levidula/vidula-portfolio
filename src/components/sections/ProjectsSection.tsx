@@ -1,45 +1,50 @@
+import { useState } from 'react';
 import { ProjectCard } from '@/components/ProjectCard';
 import { AnimatedSection } from '@/components/AnimatedSection';
 import { Button } from '@/components/ui/button';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, ChevronDown, ChevronUp } from 'lucide-react';
 
-import project1 from '@/assets/project-1.jpg';
-import project2 from '@/assets/project-2.jpg';
-import project3 from '@/assets/project-3.jpg';
-import project4 from '@/assets/project-4.jpg';
+import projectInventory from '@/assets/project-inventory.jpg';
+import projectChatbot from '@/assets/project-chatbot.jpg';
+import projectOgenz from '@/assets/project-ogenz.jpg';
+import projectComingSoon from '@/assets/project-coming-soon.jpg';
 
 const projects = [
   {
-    image: project1,
-    title: 'TaskFlow Dashboard',
-    description: 'A modern task management application with real-time collaboration features and intuitive drag-and-drop interface.',
-    tags: ['React', 'JavaScript', 'CSS', 'Vite'],
-    year: '2024',
+    image: projectInventory,
+    title: 'Inventory Management System',
+    description: 'Web-based inventory and stock management system with real-time tracking and analytics dashboard.',
+    tags: ['HTML', 'CSS', 'Python', 'MySQL'],
+    year: 'Jan 2024 – Mar 2024',
   },
   {
-    image: project2,
-    title: 'Ecomm Fashion Store',
-    description: 'Full-stack e-commerce platform with seamless checkout experience and inventory management.',
+    image: projectChatbot,
+    title: 'Empathic AI Chatbot',
+    description: 'Emotion-aware NLP chatbot that understands and responds to user sentiment with empathetic interactions.',
+    tags: ['Python', 'NLP', 'AI', 'Machine Learning'],
+    year: 'Aug 2025 – Nov 2025',
+  },
+  {
+    image: projectOgenz,
+    title: 'OgenZ',
+    description: 'Professional office website with modern design, responsive layout, and corporate branding.',
     tags: ['React', 'JavaScript', 'Tailwind CSS'],
-    year: '2024',
+    year: 'Dec 2025 – Jan 2026',
   },
   {
-    image: project3,
-    title: 'Fintech Mobile App',
-    description: 'Landing page and marketing site for a fintech mobile application with smooth animations.',
-    tags: ['React', 'JavaScript', 'Framer Motion'],
-    year: '2023',
-  },
-  {
-    image: project4,
-    title: 'Analytics Platform',
-    description: 'Data visualization dashboard with interactive charts and real-time metrics tracking.',
-    tags: ['React', 'JavaScript', 'HTML', 'CSS'],
-    year: '2023',
+    image: projectComingSoon,
+    title: 'Coming Soon',
+    description: 'Exciting new project currently in development. Stay tuned for updates!',
+    tags: ['In Progress'],
+    year: 'TBD',
   },
 ];
 
 export const ProjectsSection = () => {
+  const [showAll, setShowAll] = useState(false);
+  
+  const displayedProjects = showAll ? projects : projects.slice(0, 2);
+
   return (
     <section id="projects" className="section-padding">
       <div className="max-w-7xl mx-auto">
@@ -48,15 +53,19 @@ export const ProjectsSection = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-foreground">
               Selected Projects
             </h2>
-            <Button variant="outline" className="gap-2">
-              View all
-              <ArrowRight className="w-4 h-4" />
+            <Button 
+              variant="outline" 
+              className="gap-2"
+              onClick={() => setShowAll(!showAll)}
+            >
+              {showAll ? 'Show less' : 'View all'}
+              {showAll ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
             </Button>
           </div>
         </AnimatedSection>
 
         <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
-          {projects.map((project, index) => (
+          {displayedProjects.map((project, index) => (
             <AnimatedSection key={project.title} delay={index * 100}>
               <ProjectCard {...project} />
             </AnimatedSection>
