@@ -1,7 +1,7 @@
 import { ExperienceCard } from '@/components/ExperienceCard';
 import { AnimatedSection } from '@/components/AnimatedSection';
 import { Button } from '@/components/ui/button';
-import { Calendar } from 'lucide-react';
+import { FileText } from 'lucide-react';
 
 const experiences = [
   {
@@ -55,10 +55,16 @@ export const ExperienceSection = () => {
 
         <AnimatedSection delay={400}>
           <div className="text-center">
-            <Button variant="hero" size="lg" className="gap-2">
-              <Calendar className="w-5 h-5" />
-              Book a call
-            </Button>
+            <a 
+              href="https://flowcv.com/resume/l1j02ep42keo" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <Button variant="hero" size="lg" className="gap-2">
+                <FileText className="w-5 h-5" />
+                View My Resume
+              </Button>
+            </a>
           </div>
         </AnimatedSection>
       </div>
