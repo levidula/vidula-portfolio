@@ -14,13 +14,30 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      contact_form_rate_limits: {
+        Row: {
+          id: string
+          ip_address: string
+          submitted_at: string
+        }
+        Insert: {
+          id?: string
+          ip_address: string
+          submitted_at?: string
+        }
+        Update: {
+          id?: string
+          ip_address?: string
+          submitted_at?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      cleanup_old_rate_limits: { Args: never; Returns: undefined }
     }
     Enums: {
       [_ in never]: never
