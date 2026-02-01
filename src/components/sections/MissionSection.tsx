@@ -1,7 +1,7 @@
 import { AnimatedSection } from '@/components/AnimatedSection';
 
 export const MissionSection = () => {
-  const partners = ['Vercel', 'Stripe', 'AWS', 'Figma', 'GitHub'];
+  const partners = ['JavaScript', 'React', 'API Integration', 'Vercel', 'GitHub'];
 
   return (
     <section className="section-padding">
