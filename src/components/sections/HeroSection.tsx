@@ -97,7 +97,10 @@ export const HeroSection = () => {
             <div className="relative animate-fade-in" style={{ animationDelay: '0.2s' }}>
               {/* Profile Card */}
               <div className="relative">
-                <div className="w-80 h-[22rem] md:w-[26rem] md:h-[32rem] lg:w-[24rem] lg:h-[30rem] rounded-3xl overflow-hidden shadow-card-lg bg-gradient-hero">
+                {/* Animated gradient aura */}
+                <div className="absolute -inset-2 rounded-[2rem] profile-aura animate-gradient-shift opacity-60 blur-xl" />
+                
+                <div className="relative w-80 h-[22rem] md:w-[26rem] md:h-[32rem] lg:w-[24rem] lg:h-[30rem] rounded-3xl overflow-hidden shadow-card-lg bg-gradient-hero profile-card-hover">
                   <img
                     src={profileImage}
                     alt="Profile"
