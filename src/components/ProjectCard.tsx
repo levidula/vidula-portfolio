@@ -10,7 +10,7 @@ interface ProjectCardProps {
 
 export const ProjectCard = ({ image, title, description, tags, year }: ProjectCardProps) => {
   return (
-    <div className="group card-base card-hover overflow-hidden">
+    <div className="group card-base card-lift overflow-hidden">
       <div className="relative overflow-hidden rounded-xl mb-5">
         <img
           src={image}
