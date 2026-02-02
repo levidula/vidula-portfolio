@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button';
 import { SocialIcons } from '@/components/SocialIcons';
 import { MapPin, Sparkles, Briefcase, FolderOpen, FileText } from 'lucide-react';
 import profileImage from '@/assets/profile-image.jpg';
+import { useTilt } from '@/hooks/use-tilt';
 
 export const HeroSection = () => {
   const techStack = ['React', 'JavaScript', 'HTML', 'CSS', 'Python', 'MySQL', 'GitHub', 'API Integration', 'MS Office', 'Power BI'];
@@ -11,6 +12,12 @@ export const HeroSection = () => {
     { icon: FolderOpen, value: '4', label: 'Projects' },
     { icon: FileText, value: '3', label: 'Publications' },
   ];
+
+  const { ref: tiltRef, style: tiltStyle, handlers: tiltHandlers, isHovered } = useTilt({
+    maxTilt: 3,
+    scale: 1.01,
+    transitionSpeed: 400,
+  });
 
   return (
     <section className="section-padding min-h-screen flex items-center">
@@ -101,11 +108,16 @@ export const HeroSection = () => {
                 {/* Animated gradient aura */}
                 <div className="absolute -inset-2 rounded-[2rem] profile-aura animate-gradient-shift opacity-60 blur-xl" />
                 
-                <div className="relative w-80 h-[22rem] md:w-[26rem] md:h-[32rem] lg:w-[24rem] lg:h-[30rem] rounded-3xl overflow-hidden shadow-card-lg bg-gradient-hero profile-card-hover">
+                <div 
+                  ref={tiltRef}
+                  {...tiltHandlers}
+                  style={tiltStyle}
+                  className={`relative w-80 h-[22rem] md:w-[26rem] md:h-[32rem] lg:w-[24rem] lg:h-[30rem] rounded-3xl overflow-hidden shadow-card-lg bg-gradient-hero transition-shadow duration-300 ${isHovered ? 'shadow-[0_20px_60px_-20px_hsl(174_72%_40%/0.3),0_12px_30px_-10px_hsl(220_30%_15%/0.12)]' : ''}`}
+                >
                   <img
                     src={profileImage}
                     alt="Profile"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover pointer-events-none"
                   />
                 </div>
 
