@@ -80,10 +80,11 @@ export const HeroSection = () => {
             <div className="animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
               <p className="text-sm text-muted-foreground mb-3">Tech Stack</p>
               <div className="flex flex-wrap gap-2">
-                {techStack.map((tech) => (
+                {techStack.map((tech, index) => (
                   <span 
                     key={tech} 
-                    className="text-sm px-3 py-1.5 rounded-full bg-muted text-foreground font-medium border border-border hover:border-primary/30 transition-colors"
+                    className="text-sm px-3 py-1.5 rounded-full bg-muted text-foreground font-medium border border-border hover:border-primary/30 hover:bg-primary/5 transition-all duration-300 chip-reveal"
+                    style={{ animationDelay: `${0.5 + index * 0.05}s` }}
                   >
                     {tech}
                   </span>
@@ -109,7 +110,7 @@ export const HeroSection = () => {
                 </div>
 
                 {/* Location Badge */}
-                <div className="absolute -bottom-4 -left-4 md:-left-8 bg-card rounded-2xl px-4 py-3 shadow-card-hover flex items-center gap-2 animate-float">
+                <div className="absolute -bottom-4 -left-4 md:-left-8 bg-card rounded-2xl px-4 py-3 shadow-card-hover flex items-center gap-2 badge-glow">
                   <MapPin className="w-4 h-4 text-primary" />
                   <span className="text-sm font-medium text-foreground">Based in Chennai, Tamil Nadu</span>
                 </div>
