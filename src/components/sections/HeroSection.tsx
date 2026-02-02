@@ -14,8 +14,8 @@ export const HeroSection = () => {
 
   return (
     <section className="section-padding min-h-screen flex items-center">
-      <div className="max-w-7xl mx-auto w-full">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+      <div className="max-w-6xl mx-auto w-full">
+        <div className="grid lg:grid-cols-[1fr_auto] gap-12 lg:gap-16 items-start justify-center">
           {/* Left Content */}
           <div className="space-y-8 order-2 lg:order-1">
             {/* Badge */}
@@ -94,7 +94,7 @@ export const HeroSection = () => {
           </div>
 
           {/* Right Content */}
-          <div className="relative order-1 lg:order-2 flex justify-center lg:justify-start">
+          <div className="relative order-1 lg:order-2 flex justify-center">
             <div className="relative animate-fade-in" style={{ animationDelay: '0.2s' }}>
               {/* Profile Card */}
               <div className="relative">
