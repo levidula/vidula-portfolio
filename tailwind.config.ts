@@ -50,15 +50,16 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        teal: {
-          DEFAULT: "hsl(var(--teal))",
-          light: "hsl(var(--teal-light))",
-          dark: "hsl(var(--teal-dark))",
+        clay: {
+          DEFAULT: "hsl(var(--clay))",
+          light: "hsl(var(--clay-light))",
+          dark: "hsl(var(--clay-dark))",
         },
-        lavender: {
-          DEFAULT: "hsl(var(--lavender))",
-          deep: "hsl(var(--lavender-deep))",
+        sage: {
+          DEFAULT: "hsl(var(--sage))",
+          deep: "hsl(var(--sage-deep))",
         },
+        ivory: "hsl(var(--ivory))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -112,8 +113,8 @@ export default {
           "100%": { backgroundPosition: "0% 50%" },
         },
         "glow-pulse": {
-          "0%, 100%": { boxShadow: "0 0 8px 0 hsl(var(--primary) / 0.15)" },
-          "50%": { boxShadow: "0 0 16px 2px hsl(var(--primary) / 0.25)" },
+          "0%, 100%": { boxShadow: "0 0 8px 0 hsl(var(--primary) / 0.1)" },
+          "50%": { boxShadow: "0 0 14px 2px hsl(var(--primary) / 0.18)" },
         },
         "subtle-bounce": {
           "0%, 100%": { transform: "translateY(0)" },
