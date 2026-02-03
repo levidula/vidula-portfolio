@@ -26,9 +26,9 @@ export const HeroSection = () => {
           {/* Left Content */}
           <div className="space-y-8 order-2 lg:order-1 lg:justify-self-end">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-teal-light text-primary text-sm font-medium animate-fade-in-up">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-clay-light text-primary text-sm font-medium border border-border/50 animate-fade-in-up">
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-60"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
               </span>
               Available for work
@@ -57,8 +57,8 @@ export const HeroSection = () => {
             {/* Stats */}
             <div className="flex flex-wrap gap-6 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
               {stats.map((stat) => (
-                <div key={stat.label} className="flex items-center gap-3 bg-card rounded-xl px-4 py-3 shadow-card">
-                  <div className="p-2 rounded-lg bg-teal-light">
+                <div key={stat.label} className="flex items-center gap-3 bg-card rounded-xl px-4 py-3 shadow-card border border-border/30">
+                  <div className="p-2 rounded-lg bg-clay-light">
                     <stat.icon className="w-5 h-5 text-primary" />
                   </div>
                   <div>
@@ -112,7 +112,7 @@ export const HeroSection = () => {
                   ref={tiltRef}
                   {...tiltHandlers}
                   style={tiltStyle}
-                  className={`relative w-80 h-[22rem] md:w-[26rem] md:h-[32rem] lg:w-[24rem] lg:h-[30rem] rounded-3xl overflow-hidden shadow-card-lg bg-gradient-hero transition-shadow duration-300 ${isHovered ? 'shadow-[0_20px_60px_-20px_hsl(174_72%_40%/0.3),0_12px_30px_-10px_hsl(220_30%_15%/0.12)]' : ''}`}
+                  className={`relative w-80 h-[22rem] md:w-[26rem] md:h-[32rem] lg:w-[24rem] lg:h-[30rem] rounded-3xl overflow-hidden shadow-card-lg bg-gradient-hero transition-shadow duration-300 ${isHovered ? 'shadow-[0_24px_64px_-20px_hsl(25_25%_45%/0.22),0_12px_30px_-10px_hsl(30_20%_30%/0.1)]' : ''}`}
                 >
                   <img
                     src={profileImage}
@@ -122,13 +122,13 @@ export const HeroSection = () => {
                 </div>
 
                 {/* Location Badge */}
-                <div className="absolute -bottom-4 -left-4 md:-left-8 bg-card rounded-2xl px-4 py-3 shadow-card-hover flex items-center gap-2 badge-glow">
+                <div className="absolute -bottom-4 -left-4 md:-left-8 bg-card rounded-2xl px-4 py-3 shadow-card-hover flex items-center gap-2 badge-glow border border-border/40">
                   <MapPin className="w-4 h-4 text-primary" />
                   <span className="text-sm font-medium text-foreground">Based in Chennai, Tamil Nadu</span>
                 </div>
 
                 {/* Sparkle Badge */}
-                <div className="absolute -top-4 -right-4 md:-right-8 bg-card rounded-2xl px-4 py-3 shadow-card-hover animate-float" style={{ animationDelay: '1s' }}>
+                <div className="absolute -top-4 -right-4 md:-right-8 bg-card rounded-2xl px-4 py-3 shadow-card-hover animate-float border border-border/40" style={{ animationDelay: '1s' }}>
                   <div className="flex items-center gap-2">
                     <Sparkles className="w-4 h-4 text-primary" />
                     <span className="text-sm font-medium text-foreground">Open to Opportunities</span>
