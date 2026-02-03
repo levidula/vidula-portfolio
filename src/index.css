@@ -49,6 +49,7 @@
     --gradient-contact: linear-gradient(135deg, hsl(35 25% 93%) 0%, hsl(40 30% 95%) 50%, hsl(85 12% 94%) 100%);
     --gradient-primary: linear-gradient(135deg, hsl(25 25% 45%) 0%, hsl(30 22% 50%) 100%);
     --gradient-card-hover: linear-gradient(180deg, hsl(40 35% 98%) 0%, hsl(38 30% 96%) 100%);
+    --gradient-teal: linear-gradient(135deg, hsl(25 25% 45%) 0%, hsl(30 22% 50%) 100%);
 
     /* Shadows - Warm toned */
     --shadow-sm: 0 2px 8px -2px hsl(30 20% 30% / 0.06);
