@@ -8,6 +8,7 @@ import projectInventory from '@/assets/project-inventory.jpg';
 import projectChatbot from '@/assets/project-chatbot.jpg';
 import projectOgenz from '@/assets/project-ogenz.jpg';
 import projectComingSoon from '@/assets/project-coming-soon.jpg';
+import projectShelterCastle from '@/assets/project-shelter-castle.jpg';
 
 const projects = [
   {
@@ -31,6 +32,14 @@ const projects = [
     tags: ['React', 'JavaScript', 'Tailwind CSS'],
     year: 'Dec 2025 – Jan 2026',
     link: 'https://ogenz.com/',
+  },
+  {
+    image: projectShelterCastle,
+    title: 'Shelter Castle',
+    description: 'A modern real estate website showcasing premium property listings and seamless user experience.',
+    tags: ['React', 'Tailwind CSS', 'Real Estate'],
+    year: '2025',
+    link: 'https://sheltercastle.com/',
   },
   {
     image: projectComingSoon,
