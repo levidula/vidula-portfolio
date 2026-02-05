@@ -31,10 +31,9 @@
            {/* Brand */}
            <a
              href="#home"
-            className="group font-serif text-xl md:text-2xl font-medium text-foreground tracking-[0.08em] transition-all duration-500 hover:tracking-[0.12em] hover:text-clay-dark"
+            className="relative font-serif text-xl md:text-2xl font-medium text-foreground tracking-[0.08em] transition-colors duration-300 hover:text-clay-dark after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[1px] after:bg-clay after:scale-x-0 after:origin-left after:transition-transform after:duration-500 hover:after:scale-x-100"
            >
             V.Dev
-            <span className="inline-block ml-[1px] w-[5px] h-[5px] rounded-full bg-primary align-middle animate-pulse-soft" />
            </a>
  
            {/* Navigation Links */}
