@@ -24,6 +24,7 @@ const projects = [
     description: 'Emotion-aware NLP chatbot that understands and responds to user sentiment with empathetic interactions.',
     tags: ['Python', 'NLP', 'AI', 'Machine Learning'],
     year: 'Aug 2025 – Nov 2025',
+    link: 'https://empathy-weave-46.lovable.app',
   },
   {
     image: projectOgenz,
