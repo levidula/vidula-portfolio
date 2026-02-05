@@ -6,11 +6,18 @@ interface ProjectCardProps {
   description: string;
   tags: string[];
   year: string;
+  link?: string;
 }
 
-export const ProjectCard = ({ image, title, description, tags, year }: ProjectCardProps) => {
+export const ProjectCard = ({ image, title, description, tags, year, link }: ProjectCardProps) => {
+  const CardWrapper = link ? 'a' : 'div';
+  const wrapperProps = link ? { href: link, target: '_blank', rel: 'noopener noreferrer' } : {};
+
   return (
-    <div className="group card-base card-lift overflow-hidden">
+    <CardWrapper
+      {...wrapperProps}
+      className={`group card-base card-lift overflow-hidden block ${link ? 'cursor-pointer transition-shadow duration-300 hover:shadow-lg' : ''}`}
+    >
       <div className="relative overflow-hidden rounded-xl mb-5">
         <img
           src={image}
@@ -36,6 +43,6 @@ export const ProjectCard = ({ image, title, description, tags, year }: ProjectCa
           ))}
         </div>
       </div>
-    </div>
+    </CardWrapper>
   );
 };
