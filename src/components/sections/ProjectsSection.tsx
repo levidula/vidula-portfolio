@@ -30,6 +30,7 @@ const projects = [
     description: 'Professional office website with modern design, responsive layout, and corporate branding.',
     tags: ['React', 'JavaScript', 'Tailwind CSS'],
     year: 'Dec 2025 – Jan 2026',
+    link: 'https://ogenz.com/',
   },
   {
     image: projectComingSoon,
