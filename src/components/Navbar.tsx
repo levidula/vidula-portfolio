@@ -31,9 +31,10 @@
            {/* Brand */}
            <a
              href="#home"
-             className="font-serif text-xl md:text-2xl font-semibold text-foreground tracking-wide hover:text-primary transition-colors duration-300"
+            className="group font-serif text-xl md:text-2xl font-medium text-foreground tracking-[0.08em] transition-all duration-500 hover:tracking-[0.12em] hover:text-clay-dark"
            >
-             Vidula P S
+            V.Dev
+            <span className="inline-block ml-[1px] w-[5px] h-[5px] rounded-full bg-primary align-middle animate-pulse-soft" />
            </a>
  
            {/* Navigation Links */}
