@@ -16,6 +16,16 @@ export const ContactSection = () => {
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   Open for freelance work, full-time roles, collaborations, or just a friendly discussion about web development.
                 </p>
+                <div className="space-y-2">
+                  <a 
+                    href="mailto:byvidula@gmail.com" 
+                    className="block text-lg font-medium text-primary hover:text-teal-dark transition-colors"
+                  >
+                    byvidula@gmail.com
+                  </a>
+                  <p className="text-muted-foreground">Location: Chennai, Tamil Nadu</p>
+                  <p className="text-muted-foreground">Available for freelance and internship opportunities</p>
+                </div>
               </div>
 
               {/* Right Content - Form */}
