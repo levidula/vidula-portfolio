@@ -1,5 +1,6 @@
 import { ContactForm } from '@/components/ContactForm';
 import { AnimatedSection } from '@/components/AnimatedSection';
+import { Mail, MapPin, Briefcase } from 'lucide-react';
 
 export const ContactSection = () => {
   return (
@@ -16,6 +17,27 @@ export const ContactSection = () => {
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   Open for freelance work, full-time roles, collaborations, or just a friendly discussion about web development.
                 </p>
+                
+                {/* Contact Info */}
+                <div className="space-y-2">
+                  <a 
+                    href="mailto:byvidula@gmail.com" 
+                    className="flex items-center gap-2 text-foreground hover:text-primary transition-colors"
+                  >
+                    <Mail className="w-5 h-5" />
+                    <span>byvidula@gmail.com</span>
+                  </a>
+                  
+                  <div className="flex items-center gap-2 text-muted-foreground pt-1">
+                    <MapPin className="w-5 h-5" />
+                    <span>Location: Chennai, Tamil Nadu</span>
+                  </div>
+                  
+                  <div className="flex items-center gap-2 text-muted-foreground pt-0.5">
+                    <Briefcase className="w-5 h-5" />
+                    <span>Available for freelance and internship opportunities</span>
+                  </div>
+                </div>
               </div>
 
               {/* Right Content - Form */}
