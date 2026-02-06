@@ -1,6 +1,12 @@
- import { useState, useEffect } from 'react';
- 
- const navLinks = [
+import { useState, useEffect } from 'react';
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+  SheetClose,
+} from '@/components/ui/sheet';
+
+const navLinks = [
    { label: 'Home', href: '#home' },
    { label: 'Projects', href: '#projects' },
    { label: 'Experience', href: '#experience' },
@@ -50,28 +56,46 @@
              ))}
            </ul>
  
-           {/* Mobile Menu Button */}
-           <button
-             className="md:hidden p-2 text-foreground hover:text-primary transition-colors duration-300"
-             aria-label="Menu"
-           >
-             <svg
-               xmlns="http://www.w3.org/2000/svg"
-               width="24"
-               height="24"
-               viewBox="0 0 24 24"
-               fill="none"
-               stroke="currentColor"
-               strokeWidth="1.5"
-               strokeLinecap="round"
-               strokeLinejoin="round"
-             >
-               <line x1="4" y1="8" x2="20" y2="8" />
-               <line x1="4" y1="16" x2="20" y2="16" />
-             </svg>
-           </button>
-         </div>
-       </div>
-     </nav>
-   );
- };
+            {/* Mobile Menu */}
+            <Sheet>
+              <SheetTrigger asChild>
+                <button
+                  className="md:hidden p-2 text-foreground hover:text-primary transition-colors duration-300"
+                  aria-label="Open menu"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <line x1="4" y1="8" x2="20" y2="8" />
+                    <line x1="4" y1="16" x2="20" y2="16" />
+                  </svg>
+                </button>
+              </SheetTrigger>
+              <SheetContent side="top" className="w-full bg-background border-b border-border">
+                <nav className="flex flex-col gap-6 pt-8 pb-6">
+                  {navLinks.map((link) => (
+                    <SheetClose asChild key={link.label}>
+                      <a
+                        href={link.href}
+                        className="text-lg font-medium text-foreground hover:text-primary transition-colors duration-300 px-2"
+                      >
+                        {link.label}
+                      </a>
+                    </SheetClose>
+                  ))}
+                </nav>
+              </SheetContent>
+            </Sheet>
+          </div>
+        </div>
+      </nav>
+    );
+  };
