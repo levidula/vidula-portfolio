@@ -28,10 +28,13 @@ export const FooterSection = () => {
           </div>
 
           {/* Copyright */}
-          <div className="mt-12 pt-8 border-t border-border">
+          <div className="mt-12 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-muted-foreground text-center md:text-left">
               © {new Date().getFullYear()} Web Developer. All rights reserved.
             </p>
+            <span className="font-serif text-xl md:text-2xl font-medium text-foreground tracking-[0.08em]">
+              V.dev
+            </span>
           </div>
         </AnimatedSection>
       </div>
