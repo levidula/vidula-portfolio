@@ -7,9 +7,10 @@ interface ProjectCardProps {
   tags: string[];
   year: string;
   link?: string;
+  label?: string;
 }
 
-export const ProjectCard = ({ image, title, description, tags, year, link }: ProjectCardProps) => {
+export const ProjectCard = ({ image, title, description, tags, year, link, label }: ProjectCardProps) => {
   const CardWrapper = link ? 'a' : 'div';
   const wrapperProps = link ? { href: link, target: '_blank', rel: 'noopener noreferrer' } : {};
 
@@ -25,6 +26,11 @@ export const ProjectCard = ({ image, title, description, tags, year, link }: Pro
           className="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-foreground/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        {label && (
+          <span className="absolute top-3 left-3 px-2 py-1 rounded-md text-xs font-medium bg-primary text-primary-foreground">
+            {label}
+          </span>
+        )}
       </div>
       
       <div className="space-y-3">
