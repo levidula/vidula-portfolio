@@ -20,9 +20,9 @@ export const HeroSection = () => {
   });
 
   return (
-    <section className="section-padding min-h-screen flex items-center">
-      <div className="max-w-7xl mx-auto w-full">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+    <section className="section-padding min-h-screen flex items-center overflow-x-hidden">
+      <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-0">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-start">
           {/* Left Content */}
           <div className="space-y-8 order-2 lg:order-1 lg:justify-self-end">
             {/* Badge */}
@@ -101,7 +101,7 @@ export const HeroSection = () => {
           </div>
 
           {/* Right Content */}
-          <div className="relative order-1 lg:order-2 flex justify-center lg:justify-self-start">
+          <div className="relative order-1 lg:order-2 flex justify-center lg:justify-self-start w-full max-w-sm sm:max-w-md lg:max-w-none mx-auto lg:mx-0">
             {/* Ambient Animated Element */}
             <div 
               className="absolute -right-20 top-1/4 w-64 h-64 rounded-full bg-clay/[0.06] blur-3xl animate-drift-slow pointer-events-none -z-10"
@@ -150,6 +150,12 @@ export const HeroSection = () => {
               
               {/* Skill Focus Highlight */}
               <div className="hidden lg:block mt-6 text-center animate-fade-in" style={{ animationDelay: '0.6s' }}>
+                {/* Decorative accent */}
+                <div className="flex items-center justify-center gap-2 mb-3">
+                  <span className="w-1 h-1 rounded-full bg-muted-foreground/30" />
+                  <span className="w-8 h-px bg-border/60" />
+                  <span className="w-1 h-1 rounded-full bg-muted-foreground/30" />
+                </div>
                 <p className="text-sm text-muted-foreground/70 font-sans tracking-wide mb-2">Currently focusing on</p>
                 <p className="text-base text-foreground/80 font-sans font-medium leading-relaxed">Full-Stack Development</p>
                 <p className="text-base text-foreground/80 font-sans font-medium leading-relaxed">AI-Powered Interfaces</p>
