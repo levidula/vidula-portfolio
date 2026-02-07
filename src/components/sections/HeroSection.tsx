@@ -149,16 +149,20 @@ export const HeroSection = () => {
               </div>
               
               {/* Skill Focus Highlight */}
-              <div className="hidden lg:block mt-6 text-center animate-fade-in" style={{ animationDelay: '0.6s' }}>
-                {/* Decorative accent */}
-                <div className="flex items-center justify-center gap-2 mb-3">
-                  <span className="w-1 h-1 rounded-full bg-muted-foreground/30" />
-                  <span className="w-8 h-px bg-border/60" />
-                  <span className="w-1 h-1 rounded-full bg-muted-foreground/30" />
+              <div className="hidden lg:flex justify-center mt-6 animate-fade-in" style={{ animationDelay: '0.6s' }}>
+                {/* Vertical accent line */}
+                <div className="w-px bg-primary/40 mr-4 self-stretch" />
+                <div className="text-left">
+                  {/* Decorative accent */}
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="w-1 h-1 rounded-full bg-muted-foreground/30" />
+                    <span className="w-8 h-px bg-border/60" />
+                    <span className="w-1 h-1 rounded-full bg-muted-foreground/30" />
+                  </div>
+                  <p className="text-sm text-muted-foreground/70 font-sans tracking-wide mb-2">Currently focusing on</p>
+                  <p className="text-base text-foreground/80 font-sans font-medium leading-relaxed">Full-Stack Development</p>
+                  <p className="text-base text-foreground/80 font-sans font-medium leading-relaxed">AI-Powered Interfaces</p>
                 </div>
-                <p className="text-sm text-muted-foreground/70 font-sans tracking-wide mb-2">Currently focusing on</p>
-                <p className="text-base text-foreground/80 font-sans font-medium leading-relaxed">Full-Stack Development</p>
-                <p className="text-base text-foreground/80 font-sans font-medium leading-relaxed">AI-Powered Interfaces</p>
               </div>
             </div>
           </div>
