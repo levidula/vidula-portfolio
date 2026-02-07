@@ -102,6 +102,19 @@ export const HeroSection = () => {
 
           {/* Right Content */}
           <div className="relative order-1 lg:order-2 flex justify-center lg:justify-self-start">
+            {/* Ambient Animated Element */}
+            <div 
+              className="absolute -right-20 top-1/4 w-64 h-64 rounded-full bg-clay/[0.06] blur-3xl animate-drift-slow pointer-events-none -z-10"
+              aria-hidden="true"
+            />
+            
+            {/* Skill Focus Highlight */}
+            <div className="hidden lg:block absolute -right-8 xl:-right-16 top-1/2 -translate-y-1/2 text-right animate-fade-in" style={{ animationDelay: '0.6s' }}>
+              <p className="text-xs text-muted-foreground/70 font-sans tracking-wide mb-1">Currently focusing on</p>
+              <p className="text-sm text-foreground/80 font-sans font-medium leading-relaxed">Full-Stack Development</p>
+              <p className="text-sm text-foreground/80 font-sans font-medium leading-relaxed">AI-Powered Interfaces</p>
+            </div>
+            
             <div className="relative animate-fade-in" style={{ animationDelay: '0.2s' }}>
               {/* Profile Card */}
               <div className="relative">
