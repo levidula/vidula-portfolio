@@ -108,12 +108,6 @@ export const HeroSection = () => {
               aria-hidden="true"
             />
             
-            {/* Skill Focus Highlight */}
-            <div className="hidden lg:block absolute -right-8 xl:-right-16 top-1/2 -translate-y-1/2 text-right animate-fade-in" style={{ animationDelay: '0.6s' }}>
-              <p className="text-xs text-muted-foreground/70 font-sans tracking-wide mb-1">Currently focusing on</p>
-              <p className="text-sm text-foreground/80 font-sans font-medium leading-relaxed">Full-Stack Development</p>
-              <p className="text-sm text-foreground/80 font-sans font-medium leading-relaxed">AI-Powered Interfaces</p>
-            </div>
             
             <div className="relative animate-fade-in" style={{ animationDelay: '0.2s' }}>
               {/* Profile Card */}
@@ -152,6 +146,13 @@ export const HeroSection = () => {
               {/* Social Icons */}
               <div className="mt-8 flex justify-center">
                 <SocialIcons />
+              </div>
+              
+              {/* Skill Focus Highlight */}
+              <div className="hidden lg:block mt-6 text-center animate-fade-in" style={{ animationDelay: '0.6s' }}>
+                <p className="text-xs text-muted-foreground/70 font-sans tracking-wide mb-1">Currently focusing on</p>
+                <p className="text-sm text-foreground/80 font-sans font-medium leading-relaxed">Full-Stack Development</p>
+                <p className="text-sm text-foreground/80 font-sans font-medium leading-relaxed">AI-Powered Interfaces</p>
               </div>
             </div>
           </div>
