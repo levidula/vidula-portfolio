@@ -121,6 +121,10 @@ export default {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-2px)" },
         },
+        "drift-slow": {
+          "0%, 100%": { transform: "translateX(0)" },
+          "50%": { transform: "translateX(8px)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -133,6 +137,7 @@ export default {
         "gradient-shift": "gradient-shift 8s ease-in-out infinite",
         "glow-pulse": "glow-pulse 4s ease-in-out infinite",
         "subtle-bounce": "subtle-bounce 3s ease-in-out infinite",
+        "drift-slow": "drift-slow 12s ease-in-out infinite",
       },
     },
   },
