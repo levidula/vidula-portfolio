@@ -150,9 +150,9 @@ export const HeroSection = () => {
               
               {/* Skill Focus Highlight */}
               <div className="hidden lg:block mt-6 text-center animate-fade-in" style={{ animationDelay: '0.6s' }}>
-                <p className="text-xs text-muted-foreground/70 font-sans tracking-wide mb-1">Currently focusing on</p>
-                <p className="text-sm text-foreground/80 font-sans font-medium leading-relaxed">Full-Stack Development</p>
-                <p className="text-sm text-foreground/80 font-sans font-medium leading-relaxed">AI-Powered Interfaces</p>
+                <p className="text-sm text-muted-foreground/70 font-sans tracking-wide mb-2">Currently focusing on</p>
+                <p className="text-base text-foreground/80 font-sans font-medium leading-relaxed">Full-Stack Development</p>
+                <p className="text-base text-foreground/80 font-sans font-medium leading-relaxed">AI-Powered Interfaces</p>
               </div>
             </div>
           </div>
