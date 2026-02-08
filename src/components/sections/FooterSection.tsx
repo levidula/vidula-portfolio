@@ -34,7 +34,7 @@ export const FooterSection = () => {
                 <h4 className="text-sm font-semibold text-foreground/80 tracking-wide uppercase">
                   Why work with me
                 </h4>
-                <ul className="space-y-1.5 text-sm text-muted-foreground">
+                <ul className="space-y-1.5 text-base text-muted-foreground">
                   <li className="flex items-start gap-2">
                     <span className="text-primary">–</span>
                     <span>Strong fundamentals & clean architecture</span>
@@ -44,7 +44,7 @@ export const FooterSection = () => {
                     <span>Curious about AI + modern web</span>
                   </li>
                 </ul>
-                <p className="text-xs text-muted-foreground/70 italic pt-1">
+                <p className="text-sm text-muted-foreground/70 italic pt-1">
                   Happy to connect and explore collaboration opportunities.
                 </p>
               </div>
