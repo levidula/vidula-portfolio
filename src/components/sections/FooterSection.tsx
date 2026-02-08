@@ -58,7 +58,7 @@ export const FooterSection = () => {
           {/* Copyright */}
           <div className="mt-8 pt-6 border-t border-border/50">
             <p className="text-sm text-muted-foreground text-center">
-              © {new Date().getFullYear()} Web Developer. All rights reserved.
+              © {new Date().getFullYear()} Vidula P S. All rights reserved.
             </p>
           </div>
         </AnimatedSection>
