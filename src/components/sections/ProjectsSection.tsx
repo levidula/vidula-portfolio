@@ -40,7 +40,7 @@ const projects = [
     title: 'Shelter Castle',
     description: 'A modern real estate website showcasing premium property listings and seamless user experience.',
     tags: ['React', 'JavaScript', 'Node.js', 'Express.js'],
-    year: '2025',
+    year: '2026',
     link: 'https://sheltercastle.com/',
     label: 'Full-stack',
   },
